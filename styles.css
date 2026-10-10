@@ -1,0 +1,383 @@
+:root {
+  --bg: #fff8d6;
+  --panel: #fffef5;
+  --primary: #c96d2d;
+  --secondary: #5b3c1e;
+  --accent: #efc75e;
+  --pink: #ff8aa5;
+  --green: #4caf7f;
+  --shadow: rgba(77, 42, 18, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #fdf8d9 0%, #ffe8b3 100%);
+  color: var(--secondary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-decor {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.decor-1 {
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 138, 165, 0.4);
+  top: 80px;
+  right: 80px;
+}
+
+.decor-2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(239, 199, 94, 0.34);
+  bottom: 80px;
+  left: 50px;
+}
+
+.hero,
+.container,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fff4ba 0%, #f9d88a 100%);
+  padding: 24px 18px 60px;
+  border-bottom: 6px solid #d98b4a;
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  color: var(--secondary);
+}
+
+.brand-sub {
+  font-size: 1rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(92, 58, 27, 0.2);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.05;
+  color: var(--secondary);
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.3rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2px solid rgba(85, 56, 32, 0.2);
+}
+
+.badge.retro {
+  background: #ffdf7d;
+}
+
+.badge.fresh {
+  background: #e7f9df;
+}
+
+.profile-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid rgba(93, 59, 30, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(90, 53, 24, 0.12);
+  padding: 1.4rem;
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem;
+  font-size: 2.6rem;
+  background: linear-gradient(135deg, #f8d26d, #ff9d7d);
+  box-shadow: inset 0 7px 12px rgba(255,255,255,0.35);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-top: 0;
+  font-family: "Fredoka", sans-serif;
+}
+
+.profile-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+  font-size: 0.97rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 42px 18px 70px;
+}
+
+.section {
+  margin-bottom: 42px;
+  background: rgba(255,255,255,0.56);
+  border: 2px solid rgba(110, 79, 51, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(67, 39, 24, 0.05);
+  padding: 1.5rem;
+}
+
+.section h2 {
+  margin: 0 0 1.2rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  color: var(--secondary);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.cards-2 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  background: linear-gradient(180deg, #fffef9, #fff3cc);
+  border: 2px solid rgba(123, 91, 47, 0.12);
+  border-radius: 18px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 7px 18px rgba(98, 61, 32, 0.06);
+}
+
+.card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.card p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.social-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--secondary);
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 2px solid rgba(0,0,0,0.04);
+  box-shadow: 0 8px 20px rgba(55, 38, 18, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-2px);
+}
+
+.social-card .icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  font-size: 1.7rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.social-card small {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.social-card strong {
+  font-size: 1.1rem;
+}
+
+.instagram .icon {
+  background: linear-gradient(135deg, #ffc2d6, #ff8aa5);
+}
+
+.tiktok .icon {
+  background: linear-gradient(135deg, #d7f4ff, #9ad7ff);
+}
+
+.quote-box {
+  text-align: center;
+}
+
+.quote-box blockquote {
+  margin: 0;
+  padding: 1.6rem 1rem;
+  font-family: "Fredoka", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  line-height: 1.3;
+  color: var(--secondary);
+}
+
+.quote-box span {
+  color: var(--primary);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  background: rgba(255,255,255,0.72);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid rgba(120, 90, 62, 0.12);
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+th {
+  background: #f9d77d;
+  font-weight: 700;
+}
+
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(135deg, #fffaf1, #fff0b9);
+  border-radius: 18px;
+  border: 2px solid rgba(131, 96, 49, 0.1);
+}
+
+.music-icon {
+  width: 66px;
+  height: 66px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ffd76a, #f0a853);
+}
+
+.music-title {
+  margin: 0 0 0.35rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.music-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 16px 40px;
+  font-weight: 600;
+  color: #6d4a2d;
+}
+
+@media (max-width: 760px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand,
+  .brand-sub {
+    width: 100%;
+  }
+}
